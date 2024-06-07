@@ -1,0 +1,36 @@
+<!DOCTYPE tml>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title> Insert title here </title>
+	<link rel="stylesheet" type="text/css" 
+	href="../static/css/bootstrap.min.css" 
+	th:href="@{css/bootstrap.min.css}" />
+</head>
+
+<body>
+	<div class="container">
+		<h3>TRADIV AFRIQUE - Affichage liste des produits !!</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Service</th>
+				<th>Prix Service</th>
+				<th>Quantite</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="p:${listProduits}">
+				<td th:text="${p.id}"></td>
+				<td th:text="${p.service}"></td>
+				<td th:text="${p.prix}"></td>
+				<td th:text="${p.quantite}"></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</body>
+
+</html>
